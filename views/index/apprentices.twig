@@ -1,6 +1,10 @@
 {% extends 'layouts/default.twig' %}
+
+{% block title %}
+PHP Apprentices
+{% endblock %}
+
 {% block content %}
-    <h1>PHP Apprentices</h1>
 
     <div data-ng-controller="ApprenticeSearchController">
         <p>Type in a tag to search for an apprentice. Right now this only supports one tag.</p>

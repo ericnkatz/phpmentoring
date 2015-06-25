@@ -1,0 +1,108 @@
+@import url(http://fonts.googleapis.com/css?family=Crete+Round:400,400italic|Merriweather+Sans:400,400italic,700,700italic|Kaushan+Script);
+.hero {
+  min-height: 70vh;
+  background: linear-gradient(#4F5B93, #E2E4EF); }
+
+.logo #php-logo {
+  width: 100px;
+  vertical-align: middle;
+  position: relative; }
+  .logo #php-logo path {
+    stroke: #444 !important;
+    transition: 300ms; }
+
+.logo:hover #php-logo path {
+  fill: #8892BF !important; }
+
+.logo:hover span {
+  color: gold; }
+
+.logo span {
+  font-family: 'Kaushan Script', cursive;
+  font-weight: 400;
+  font-size: 2rem;
+  position: relative;
+  left: -1.35rem;
+  top: 0.25rem;
+  line-height: 1;
+  color: gold;
+  transition: 300ms; }
+
+body {
+  color: #333;
+  margin: 0; }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Merriweather Sans', sans-serif;
+  margin: 2.5rem 0 0.4rem;
+  border-bottom: 3px solid #8892BF; }
+
+a, a:hover {
+  color: #4F5B93;
+  text-decoration: none;
+  transition: color 250ms; }
+
+a:hover {
+  color: #8892BF; }
+
+h1 {
+  font-family: 'Crete Round', serif;
+  font-style: italic;
+  font-size: 4rem;
+  line-height: 1.5;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 0 3px 0 #333, 1px 4px 0 #333, 2px 5px 0 #333, 3px 6px 0 #333;
+  position: relative;
+  background: linear-gradient(45deg, #4F5B93, #8892BF);
+  border-bottom: 1rem solid #333;
+  padding-top: 5rem;
+  margin: 0; }
+
+h2 {
+  display: inline-block;
+  background: #333;
+  padding: 0.3em 1em;
+  color: #fff;
+  transform: skew(30deg);
+  transition: 300ms; }
+  h2 span {
+    transform: skew(-30deg);
+    display: block; }
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box; }
+
+p {
+  line-height: 1.2;
+  margin-bottom: 0.35rem; }
+
+section a:hover {
+  border-bottom: 2px solid #4F5B93; }
+
+nav {
+  font-family: 'Merriweather Sans',sans-serif;
+  background: #333; }
+  nav ul {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    line-height: 3;
+    text-align: center; }
+  nav li {
+    display: inline-block;
+    margin: 0 1.5em; }
+  nav .active a {
+    color: gold; }
+  nav a {
+    color: #fff; }
+    nav a:hover {
+      color: #8892BF;
+      text-shadow: 0 1px 0 black, 1px 2px 0 black; }

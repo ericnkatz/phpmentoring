@@ -1,0 +1,164 @@
+@import url(http://fonts.googleapis.com/css?family=Crete+Round:400,400italic|Merriweather+Sans:400,400italic,700,700italic|Kaushan+Script);
+
+$purple: #8892BF;
+$pale-purple: #E2E4EF;
+$dark-purple: #4F5B93;
+$h1: #fff;
+$text: #333;
+
+$page-width: 1200px;
+.hero {
+  min-height:70vh;
+  background: linear-gradient(#4F5B93, #E2E4EF);
+
+  h1 {
+
+  }
+}
+.logo {
+  #php-logo {
+    width:100px;
+    vertical-align: middle;
+    position: relative;
+
+    path {
+      stroke: #444 !important;
+      transition: 300ms;
+    }
+  }
+  &:hover {
+    #php-logo path {
+      fill: $purple !important;
+    }
+
+    span {
+      color: gold;
+    }
+  }
+
+  span {
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 400;
+    font-size: 2rem;
+    position: relative;
+    left: -1.35rem;
+    top: 0.25rem;
+    line-height: 1;
+    color: gold;
+    transition: 300ms;
+  }
+}
+
+body {
+  color: $text;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Merriweather Sans', sans-serif;
+  margin: 2.5rem 0 0.4rem;
+  border-bottom: 3px solid $purple;
+}
+
+a, a:hover {
+  color: $dark-purple;
+  text-decoration: none;
+  transition: color 250ms;
+}
+
+a:hover {
+  color: $purple;
+}
+
+
+h1 {
+  font-family: 'Crete Round', serif;
+  font-style: italic;
+  font-size: 4rem;
+  line-height: 1.5;
+  text-align: center;
+  color: $h1;
+  letter-spacing: 2px;
+  text-shadow:0 3px 0 $text,
+              1px 4px 0 $text,
+              2px 5px 0 $text,
+              3px 6px 0 $text;
+  position: relative;
+  background: linear-gradient( 45deg, $dark-purple, $purple );
+  border-bottom: 1rem solid $text;
+  padding-top: 5rem;
+  margin: 0;
+}
+
+h2 {
+  display: inline-block;
+  background: $text;
+  padding: 0.3em 1em;
+  color: $h1;
+  transform: skew(30deg);
+  transition: 300ms;
+
+  span {
+    transform: skew(-30deg);
+    display: block;
+  }
+  &:hover {
+  }
+}
+
+.container {
+  width: $page-width;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+p {
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+}
+
+section {
+  a {
+    &:hover {
+      border-bottom: 2px solid $dark-purple;
+    }
+  }
+}
+
+nav {
+  font-family: 'Merriweather Sans',sans-serif;
+  background: $text;
+
+  ul {
+    width: $page-width;
+    max-width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    line-height: 3;
+    text-align: center;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 1.5em
+  }
+  
+  .active {
+    a {
+      color: gold;
+    }
+  }
+
+  a {
+    color: $h1;
+
+    &:hover {
+      color: $purple;
+      text-shadow: 0 1px 0 black,
+                   1px 2px 0 black;
+    }
+  }
+}
