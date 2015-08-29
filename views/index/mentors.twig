@@ -7,8 +7,9 @@ PHP Mentors
 
 {% block content %}
 
-    <div data-ng-controller="MentorSearchController" class="ng-scope">
-        <p>Type in a tag to search for a mentor. Right now this only supports one tag.</p>
+
+    <div data-ng-controller="MentorSearchController">
+        <p>Type in a tag to search for a mentor. Separate tags with comma (e.g. PHP, testing).</p>
         <form>
             <div class="input-group">
                 <label for="name">Subject:</label> <input type="text" name="name" data-ng-model="name">
@@ -21,16 +22,22 @@ PHP Mentors
 
         <div class="panel panel-default" data-ng-repeat="mentor in mentors | mentorTags:name | orderBy :mentor.name">
             <div class="panel-heading"><a href="/profile/{% verbatim %}{{ mentor.id }}{% endverbatim %}">{% verbatim %}{{ mentor.name }}{% endverbatim %}</a></div>
-            <div class="panel-body">
-                <span>
-                    <img src="{% verbatim %}{{ mentor.imageUrl }}{% endverbatim %}?s=100"/>
-                </span>
-                {% verbatim %}{{ mentor.profile }}{% endverbatim %}
+             <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <img src="{% verbatim %}{{ mentor.imageUrl }}{% endverbatim %}?s=150" width="150" height="150"/>
 
-                <div class="tags">
-                    <span class="label label-primary" data-ng-repeat="tag in mentor.mentorTags">
-                        {% verbatim %}{{ tag.name }}{% endverbatim %}
-                    </span>
+                        <div class="tags">
+                            <ul class="list-inline">
+                                <li data-ng-repeat="tag in mentor.mentorTags">
+                                    <span class="label label-primary" >
+                                        {% verbatim %}{{ tag.name }}{% endverbatim %}
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-10" ng-bind-html="mentor.profile_markdown | unsafe"></div>
                 </div>
             </div>
         </div>
